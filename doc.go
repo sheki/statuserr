@@ -1,6 +1,6 @@
-// Package statusErr provides a Errors with a HTTP status.
-// this is useful for writing HTTP APIs where you want to return a correct
-// http status from any part of the codebase
+// Package statuserr provides errors with a HTTP status code.
+// this is useful for writing HTTP APIs.
+// return http status from any part of the codebase
 //   _, Err := ioutil.ReadAll(r)
 //   if Err != nil {
 //     return statusErr.InternalServerError.Wrap(Err)
@@ -24,5 +24,4 @@
 //   if e, ok := Err.(StatusCode); ok {
 //     http.Error(w, e.Status(), e.Error())
 //   }
-
 package statuserr
