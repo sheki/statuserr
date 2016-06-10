@@ -16,6 +16,14 @@
 //     return statuserr.Conflict
 //   }
 // package has types for all http status codes greater than 400.
+// The error values implement interface
+//   type StatusCode interface {
+//     Status() int
+//   }
+// to get the status code do
+//   if e, ok := err.(StatusCode); ok {
+//     http.Error(w, e.Status(), e.Error())
+//   }
 
 package statuserr
 
